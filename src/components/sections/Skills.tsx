@@ -1,18 +1,18 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import SectionWrapper from '@/components/layout/SectionWrapper'
 import GlassCard from '@/components/ui/GlassCard'
 import { SKILL_CATEGORIES } from '@/data/skills'
+import { motion, type Variants } from 'framer-motion'
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' as const } },
 }
 
 function ProgressBar({ level, delay }: { level: number; delay: number }) {
@@ -22,7 +22,7 @@ function ProgressBar({ level, delay }: { level: number; delay: number }) {
         initial={{ width: 0 }}
         whileInView={{ width: `${level}%` }}
         viewport={{ once: true }}
-        transition={{ duration: 1.2, delay, ease: 'easeOut' }}
+        transition={{ duration: 1.2, delay, ease: 'easeOut' as const }}
         className="h-full rounded-full"
         style={{
           background:
