@@ -14,7 +14,7 @@ import { Code2, Cpu, Globe, Rocket } from 'lucide-react'
 
 const TRAITS = [
   { emoji: '🎯', label: 'Problem Solver' },
-  { emoji: '🧠', label: 'ML/CV Curious' },
+  { emoji: '🧠', label: 'AI Curious' },
   { emoji: '📚', label: 'Lifelong Learner' },
   { emoji: '🤝', label: 'Team Player' },
   { emoji: '⚡', label: 'Fast Learner' },

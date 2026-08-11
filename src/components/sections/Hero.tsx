@@ -7,8 +7,8 @@ import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 
 const ROLES = [
   "Full-Stack Developer",
-  "React & Next.js Engineer",
   "Software Engineer",
+  "AI/ML Enthusiast"
 ];
 
 function useTypewriter(words: string[], speed = 80, pause = 1800) {
@@ -171,22 +171,24 @@ export default function Hero() {
               label: "LinkedIn",
               href: "https://linkedin.com/in/zulfamunaf",
             },
-            { icon: Mail, label: "Email", href: "mailto:zulfamunaf@email.com" },
-          ].map(({ icon: Icon, label, href }) => (
-            <motion.a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-11 h-11 glass rounded-xl flex items-center justify-center transition-all duration-200"
-              style={{ color: "var(--text-muted)" }}
-            >
-              <Icon size={18} />
-            </motion.a>
-          ))}
+            { icon: Mail, label: "Email", href: "https://mail.google.com/mail/?view=cm&to=zulfamunaf@gmail.com" },
+          ].map(({ icon: Icon, label, href }) => {
+            const isExternal = href.startsWith("http");
+            return (
+              <motion.a
+                key={label}
+                href={href}
+                {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                aria-label={label}
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-11 h-11 glass rounded-xl flex items-center justify-center transition-all duration-200"
+                style={{ color: "var(--text-muted)" }}
+              >
+                <Icon size={18} />
+              </motion.a>
+            );
+          })}
         </motion.div>
       </div>
 

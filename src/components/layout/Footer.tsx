@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '@/components/ui/SocialIcons'
 const SOCIAL = [
-  { icon: GithubIcon, label: 'GitHub', href: 'https://github.com/zulfth' },
+  { icon: GithubIcon, label: 'GitHub', href: 'https://github.com/zulfath' },
   { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://linkedin.com/in/zulfamunaf' },
-  { icon: Mail, label: 'Email', href: 'mailto:zulfamunaf@email.com' },
+  { icon: Mail, label: 'Email', href: 'https://mail.google.com/mail/?view=cm&to=zulfamunaf@gmail.com' },
 ]
 
 const NAV_QUICK = [

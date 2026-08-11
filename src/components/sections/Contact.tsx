@@ -23,8 +23,8 @@ const SOCIAL_LINKS = [
   {
     icon: Mail,
     label: 'Email',
-    href: 'mailto:zulfamunaf@email.com',
-    username: 'zulfamunaf@email.com',
+    href: 'https://mail.google.com/mail/?view=cm&to=zulfamunaf@gmail.com',
+    username: 'zulfamunaf@gmail.com',
   },
 ]
 
